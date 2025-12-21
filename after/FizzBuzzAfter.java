@@ -12,14 +12,14 @@ public class FizzBuzzAfter {
 
   public static void fizzBuzz() {
 
-    NumberConverter fizzBuzz = new NumberConverter(List.of(
+    NumberConverter converter = new NumberConverter(List.of(
       new MultipleRule(3, "Fizz"),
       new MultipleRule(5, "Buzz"),
       new PassThroughRule()
       ));
     
     for (int i = 1; i <= 100; i++) {
-      String result = fizzBuzz.convert(i);
+      String result = converter.convert(i);
       System.out.println(result);
     }
   }
